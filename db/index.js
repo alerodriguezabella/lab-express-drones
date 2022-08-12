@@ -9,6 +9,7 @@ const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/lab-express-dr
 
 mongoose
   .connect(MONGO_URI)
+  // .connect(MONGO_URI, {family: 4})
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
   })
